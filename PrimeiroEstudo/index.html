@@ -14,26 +14,18 @@
 
     <script type="text/babel">
 
-        function MeuComponente(props) {
-            return (
-                <div>
-                    <h2>Meu nome é: {props.nome} {props.sobrenome}</h2>
-                </div>
-            )
-        }
-
-        class CompB extends React.Component {
+        class Adicao extends React.Component{
             render(){
-                return (
+                return(
                     <div>
-                        <p>Ola novamente, seu nome é: {this.props.nome} {this.props.sobrenome}</p>
+                        <p>O resultado de {this.props.a} + {this.props.b} é: {this.props.a + this.props.b}</p>
                     </div>
                 )
             }
         }
 
         const root = document.getElementById('root');
-        ReactDOM.render(<CompB nome="Júlio" sobrenome="Borges"/>, root);
+        ReactDOM.render(<Adicao a={10} b={20}/>, root);
     </script>
 </body>
 </html>
