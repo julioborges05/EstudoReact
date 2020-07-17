@@ -13,20 +13,37 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <script type="text/babel">
-        const root = document.getElementById('root');
-
-        function MeuComponente(){
-            const nome = "Júlio";
-            const sobrenome = "Borges";
-
-            return (
-                <div>
-                    <h1>Olá Mundo</h1>
-                    <p>Meu nome é {nome} {sobrenome}</p>
-                </div>
-            );
+        class CompA extends React.Component{
+            render(){
+                return (
+                    <h1>Componente A</h1>
+                )
+            }
         }
-        ReactDOM.render(<MeuComponente />, root);
+        
+        
+        class CompB extends React.Component{
+            render(){
+                return (
+                    <h1>Componente B</h1>
+                )
+            }
+        }
+
+        class MeuComponent extends React.Component{
+            render(){
+                return (
+                <div>
+                    <CompA />
+                    <hr />
+                    <CompB />
+                </div>
+                )
+            }
+        }
+        
+        const root = document.getElementById('root');
+        ReactDOM.render(<MeuComponent />, root);
     </script>
 </body>
 </html>
