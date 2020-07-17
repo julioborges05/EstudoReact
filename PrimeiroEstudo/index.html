@@ -15,9 +15,18 @@
     <script type="text/babel">
         const root = document.getElementById('root');
 
-        let teste = "Julio";
+        function MeuComponente(){
+            const nome = "Júlio";
+            const sobrenome = "Borges";
 
-        ReactDOM.render(<h1>Meu nome é {teste}!!!</h1>, root);
+            return (
+                <div>
+                    <h1>Olá Mundo</h1>
+                    <p>Meu nome é {nome} {sobrenome}</p>
+                </div>
+            );
+        }
+        ReactDOM.render(<MeuComponente />, root);
     </script>
 </body>
 </html>
